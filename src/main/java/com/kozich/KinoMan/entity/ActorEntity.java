@@ -1,0 +1,37 @@
+package com.kozich.KinoMan.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Table(name = "ACTOR")
+public class ActorEntity {
+    @Id
+    @Column(name = "ACTOR_ID", nullable = false, unique = true)
+    @SequenceGenerator(name = "seq_actor",
+    sequenceName = "seq_actor",
+    initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_actor")
+    private Long id;
+
+    @Column(name = "FIRST_NAME", nullable = false)
+    private String fistName;
+
+    @Column(name = "LAST_NAME", nullable = false)
+    private String lastName;
+
+    @Column(name = "DOB", nullable = false)
+    private String DOB;
+
+    @ManyToMany(mappedBy = "actors")
+    private List<CatalogEntity> catalog;
+}
