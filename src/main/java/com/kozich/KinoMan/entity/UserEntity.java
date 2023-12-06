@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
 @NoArgsConstructor
@@ -26,4 +28,7 @@ public class UserEntity {
 
     @Column(name = "PASSWORD", nullable = false)
     private String password;
+
+    @ManyToMany(mappedBy = "genre")
+    private List<CatalogEntity> catalog;
 }
