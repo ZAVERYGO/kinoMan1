@@ -6,11 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Table(name = "GENRE")
 public class GenreEntity {
     @Id
@@ -21,7 +22,9 @@ public class GenreEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_genre")
     private Long id;
 
-    @Column(name = "GENRE", nullable = false)
+    @Column(name = "GENRE", nullable = false, length = 20)
     private String genre;
 
+    @ManyToMany(mappedBy = "genres")
+    private List<CatalogEntity> catalog;
 }

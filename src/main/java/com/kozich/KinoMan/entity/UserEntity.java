@@ -12,7 +12,6 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Table(name = "USER")
 public class UserEntity {
     @Id
@@ -23,12 +22,9 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_user")
     private Long id;
 
-    @Column(name = "USER_NAME", nullable = false, unique = true)
+    @Column(name = "USER_NAME", nullable = false, unique = true, length = 20)
     private String userName;
 
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "PASSWORD", nullable = false, length = 20)
     private String password;
-
-    @ManyToMany(mappedBy = "genre")
-    private List<CatalogEntity> catalog;
 }

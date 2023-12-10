@@ -1,7 +1,8 @@
 package com.kozich.KinoMan.repository;
 
 import com.kozich.KinoMan.entity.ActorEntity;
-import org.springframework.data.repository.CrudRepository;
-
-public interface ActorRepository extends CrudRepository<ActorEntity, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+@Repository
+public interface ActorRepository extends JpaRepository<ActorEntity, Long> {
 }

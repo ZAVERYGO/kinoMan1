@@ -12,7 +12,6 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Table(name = "ACTOR")
 public class ActorEntity {
     @Id
@@ -23,14 +22,14 @@ public class ActorEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_actor")
     private Long id;
 
-    @Column(name = "FIRST_NAME", nullable = false)
+    @Column(name = "FIRST_NAME", nullable = false, length = 20)
     private String fistName;
 
-    @Column(name = "LAST_NAME", nullable = false)
+    @Column(name = "LAST_NAME", nullable = false, length = 20)
     private String lastName;
 
-    @Column(name = "DOB", nullable = false)
-    private String DOB;
+    @Column(name = "DAY_OF_BIRTH", nullable = false)
+    private String dayOfBirth;
 
     @ManyToMany(mappedBy = "actors")
     private List<CatalogEntity> catalog;
