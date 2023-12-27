@@ -1,10 +1,7 @@
 package com.kozich.KinoMan.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Time;
 import java.util.List;
@@ -12,7 +9,7 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "CATALOG")
 public class CatalogEntity {
     @Id
@@ -44,7 +41,7 @@ public class CatalogEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+  @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "CATALOG_ACTOR",
     joinColumns = @JoinColumn(name = "CATALOG_ID"),
     inverseJoinColumns = @JoinColumn(name = "ACTOR_ID"))

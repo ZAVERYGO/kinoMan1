@@ -7,17 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class ActorService {
-
-    private final ActorRepository actorRepository;
-    @Autowired
-    public ActorService(ActorRepository actorRepository) {
-        this.actorRepository = actorRepository;
-    }
-
-    public List<ActorEntity> getAllActor(){
-        return actorRepository.findAll();
-    }
-
+public interface ActorService {
+    List<ActorEntity> getAllActor();
 }

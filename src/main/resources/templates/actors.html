@@ -12,7 +12,7 @@
         <th>Last Name</th>
         <th>Day of Birth</th>
     </tr>
-    <tr th:each="actor : ${actors}" >&#32;
+    <tr th:each="actor : ${actors}" >
     <td th:text="${actor.getFistName()}"></td>
     <td th:text="${actor.getLastName()}"></td>
     <td th:text="${actor.getDayOfBirth()}"></td>
