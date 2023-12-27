@@ -1,3 +1,4 @@
+/*
 package com.kozich.KinoMan.entity;
 
 import jakarta.persistence.Column;
@@ -22,3 +23,4 @@ public class CatalogActorPK implements Serializable {
     private Long actorID;
 
 }
+*/

@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 @Entity
-@NoArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "GENRE")
 public class GenreEntity {

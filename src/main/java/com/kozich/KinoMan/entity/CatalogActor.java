@@ -1,3 +1,4 @@
+/*
 package com.kozich.KinoMan.entity;
 
 import jakarta.persistence.EmbeddedId;
@@ -17,3 +18,4 @@ public class CatalogActor {
     @EmbeddedId
     private CatalogActorPK catalogActorPK;
 }
+*/

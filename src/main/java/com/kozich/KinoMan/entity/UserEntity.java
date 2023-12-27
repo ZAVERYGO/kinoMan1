@@ -6,7 +6,6 @@ import lombok.*;
 
 @Data
 @Entity
-@NoArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "USER")
 public class UserEntity {

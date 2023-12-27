@@ -8,7 +8,6 @@ import java.util.List;
 
 @Data
 @Entity
-@NoArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "CATALOG")
 public class CatalogEntity {
