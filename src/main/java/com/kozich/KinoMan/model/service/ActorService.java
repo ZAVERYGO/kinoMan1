@@ -1,0 +1,9 @@
+package com.kozich.KinoMan.model.service;
+
+import com.kozich.KinoMan.model.entity.ActorEntity;
+
+import java.util.List;
+
+public interface ActorService {
+    List<ActorEntity> getAllActor();
+}

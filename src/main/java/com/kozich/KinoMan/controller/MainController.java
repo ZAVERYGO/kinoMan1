@@ -1,6 +1,6 @@
 package com.kozich.KinoMan.controller;
 
-import com.kozich.KinoMan.service.ActorService;
+import com.kozich.KinoMan.model.service.ActorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

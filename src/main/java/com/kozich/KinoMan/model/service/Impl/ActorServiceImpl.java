@@ -1,8 +1,8 @@
-package com.kozich.KinoMan.service.serviceImpl;
+package com.kozich.KinoMan.model.service.Impl;
 
-import com.kozich.KinoMan.entity.ActorEntity;
+import com.kozich.KinoMan.model.entity.ActorEntity;
+import com.kozich.KinoMan.model.service.ActorService;
 import com.kozich.KinoMan.repository.ActorRepository;
-import com.kozich.KinoMan.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.kozich.KinoMan.entity;
+package com.kozich.KinoMan.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 @Entity
-@RequiredArgsConstructor
 @Table(name = "GENRE")
 public class GenreEntity {
     @Id
@@ -21,6 +20,6 @@ public class GenreEntity {
     @Column(name = "GENRE", nullable = false, length = 20)
     private String genre;
 
-    @ManyToMany(mappedBy = "genres")
+    @OneToMany(mappedBy = "CatalogGenrePK.genre")
     private List<CatalogEntity> catalog;
 }

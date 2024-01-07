@@ -1,4 +1,4 @@
-package com.kozich.KinoMan.entity;
+package com.kozich.KinoMan.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,7 +8,6 @@ import java.util.List;
 
 @Data
 @Entity
-@RequiredArgsConstructor
 @Table(name = "CATALOG")
 public class CatalogEntity {
     @Id
@@ -40,15 +39,15 @@ public class CatalogEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-  @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "CATALOG_ACTOR",
+    @OneToMany(mappedBy = "CatalogActorPK.catalog")
+    /*@JoinTable(name = "CATALOG_ACTOR",
     joinColumns = @JoinColumn(name = "CATALOG_ID"),
-    inverseJoinColumns = @JoinColumn(name = "ACTOR_ID"))
+    inverseJoinColumns = @JoinColumn(name = "ACTOR_ID")*/
     private List<ActorEntity> actors;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "CATALOG_GENRE",
-            joinColumns = @JoinColumn(name = "CATALOG_ID"),
-            inverseJoinColumns = @JoinColumn(name = "GENRE_ID"))
+    @OneToMany(mappedBy = "CatalogGenrePK.catalog")
+    /*@JoinTable(name = "CATALOG_GENRE",
+    joinColumns = @JoinColumn(name = "CATALOG_ID"),
+    inverseJoinColumns = @JoinColumn(name = "GENRE_ID"))*/
     private List<GenreEntity> genres;
 }

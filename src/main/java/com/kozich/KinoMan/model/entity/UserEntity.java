@@ -1,4 +1,4 @@
-package com.kozich.KinoMan.entity;
+package com.kozich.KinoMan.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,7 +6,6 @@ import lombok.*;
 
 @Data
 @Entity
-@RequiredArgsConstructor
 @Table(name = "USER")
 public class UserEntity {
     @Id
