@@ -1,7 +1,6 @@
 package com.kozich.KinoMan.model.dto;
 
 import com.kozich.KinoMan.model.entity.CatalogEntity;
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -17,6 +16,8 @@ public class ActorDto {
 
     private String dayOfBirth;
 
-    private List<CatalogEntity> catalog;
+    private List<CatalogDto> catalog;
+
+
 }
 
