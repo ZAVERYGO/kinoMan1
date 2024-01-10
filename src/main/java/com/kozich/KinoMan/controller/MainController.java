@@ -1,15 +1,22 @@
 package com.kozich.KinoMan.controller;
 
-import com.kozich.KinoMan.model.service.ActorService;
+import com.kozich.KinoMan.model.service.Impl.ActorServiceImpl;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequiredArgsConstructor
+@Data
 public class MainController {
-    private final ActorService actorService;
+
+    private final ActorServiceImpl actorService;
+
+    public MainController(ActorServiceImpl actorService) {
+        this.actorService = actorService;
+    }
 
     @GetMapping("/main")
     public String getMain(Model model){

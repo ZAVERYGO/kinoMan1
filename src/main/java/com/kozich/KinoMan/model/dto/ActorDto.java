@@ -18,6 +18,5 @@ public class ActorDto {
 
     private List<CatalogDto> catalog;
 
-
 }
 

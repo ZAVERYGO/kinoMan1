@@ -26,6 +26,6 @@ public class ActorEntity {
     @Column(name = "DAY_OF_BIRTH", nullable = false)
     private String dayOfBirth;
 
-    @OneToMany(mappedBy = "catalogActorPK.actor")
+    @OneToMany(mappedBy = "CatalogActorPK.actor")
     private List<CatalogEntity> catalog;
 }
