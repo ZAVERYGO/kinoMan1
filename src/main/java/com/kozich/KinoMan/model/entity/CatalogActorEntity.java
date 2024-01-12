@@ -1,9 +1,7 @@
 
 package com.kozich.KinoMan.model.entity;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,5 +12,15 @@ import lombok.NoArgsConstructor;
 public class CatalogActorEntity {
     @EmbeddedId
     private CatalogActorPK catalogActorPK;
+
+    @ManyToOne
+    @MapsId("catalogId")
+    @JoinColumn(name = "CATALOG_ID")
+    private CatalogEntity catalog;
+
+    @ManyToOne
+    @MapsId("actorId")
+    @JoinColumn(name = "ACTOR_ID")
+    private ActorEntity actor;
 }
 

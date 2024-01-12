@@ -14,6 +14,7 @@ public class MainController {
 
     private final ActorServiceImpl actorService;
 
+    @Autowired
     public MainController(ActorServiceImpl actorService) {
         this.actorService = actorService;
     }
@@ -25,7 +26,6 @@ public class MainController {
     }
     @GetMapping("/actors")
     public String getActors(Model model){
-        //List<ActorEntity> allActor = actorService.getAllActor();
         model.addAttribute("actors", actorService.getAllActor());
         return "actors";
     }

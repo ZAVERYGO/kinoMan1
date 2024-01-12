@@ -39,15 +39,15 @@ public class CatalogEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @OneToMany(mappedBy = "CatalogActorPK.catalog")
+    @OneToMany(mappedBy = "catalog")
     /*@JoinTable(name = "CATALOG_ACTOR",
     joinColumns = @JoinColumn(name = "CATALOG_ID"),
     inverseJoinColumns = @JoinColumn(name = "ACTOR_ID")*/
-    private List<ActorEntity> actors;
+    private List<CatalogGenreEntity> actors;
 
-    @OneToMany(mappedBy = "CatalogGenrePK.catalog")
+    @OneToMany(mappedBy = "catalog")
     /*@JoinTable(name = "CATALOG_GENRE",
     joinColumns = @JoinColumn(name = "CATALOG_ID"),
     inverseJoinColumns = @JoinColumn(name = "GENRE_ID"))*/
-    private List<GenreEntity> genres;
+    private List<CatalogActorEntity> genres;
 }

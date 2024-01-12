@@ -5,8 +5,6 @@ import com.kozich.KinoMan.model.entity.ActorEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface ActorMapper {
-    ActorDto actorEntityToActorDto(ActorEntity actorEntity);
-
-    ActorEntity actorDtoToActorEntity(ActorDto actorDto);
+public interface GenreMapper {
+    ActorEntity ActorDtoToActorEntity(ActorDto actorDto);
 }

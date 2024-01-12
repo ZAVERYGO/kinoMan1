@@ -6,6 +6,7 @@ import lombok.*;
 import java.util.List;
 
 @Data
+@EqualsAndHashCode
 @Entity
 @Table(name = "ACTOR")
 public class ActorEntity {
@@ -26,6 +27,7 @@ public class ActorEntity {
     @Column(name = "DAY_OF_BIRTH", nullable = false)
     private String dayOfBirth;
 
-    @OneToMany(mappedBy = "CatalogActorPK.actor")
-    private List<CatalogEntity> catalog;
+    @OneToMany(mappedBy = "actor")
+    private List<CatalogActorEntity> catalog;
+
 }

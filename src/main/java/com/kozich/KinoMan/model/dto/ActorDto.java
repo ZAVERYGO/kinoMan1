@@ -16,7 +16,7 @@ public class ActorDto {
 
     private String dayOfBirth;
 
-    private List<CatalogDto> catalog;
+    private List<CatalogActorDto> catalog;
 
 }
 

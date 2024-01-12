@@ -13,5 +13,5 @@ public class GenreDto {
 
     private String genre;
 
-    private List<CatalogDto> catalog;
+    private List<CatalogGenreDto> catalog;
 }

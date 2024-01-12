@@ -20,6 +20,6 @@ public class GenreEntity {
     @Column(name = "GENRE", nullable = false, length = 20)
     private String genre;
 
-    @OneToMany(mappedBy = "CatalogGenrePK.genre")
-    private List<CatalogEntity> catalog;
+    @OneToMany(mappedBy = "genre")
+    private List<CatalogGenreEntity> catalog;
 }
