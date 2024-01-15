@@ -1,6 +1,8 @@
 package com.kozich.KinoMan.model.dto;
 
 import com.kozich.KinoMan.model.entity.ActorEntity;
+import com.kozich.KinoMan.model.entity.CatalogActorEntity;
+import com.kozich.KinoMan.model.entity.CatalogGenreEntity;
 import com.kozich.KinoMan.model.entity.GenreEntity;
 import jakarta.persistence.Column;
 import lombok.Data;
@@ -26,7 +28,7 @@ public class CatalogDto {
 
     private String description;
 
-    private List<ActorDto> actors;
+    private List<CatalogGenreEntity> actors;
 
-    private List<GenreDto> genres;
+    private List<CatalogActorEntity> genres;
 }
