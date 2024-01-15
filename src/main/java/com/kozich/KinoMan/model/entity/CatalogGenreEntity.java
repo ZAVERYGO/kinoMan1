@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@NoArgsConstructor
 @Table(name = "CATALOG_GENRE")
 public class CatalogGenreEntity {
     @EmbeddedId
@@ -17,10 +16,10 @@ public class CatalogGenreEntity {
     @ManyToOne
     @MapsId("catalogId")
     @JoinColumn(name = "CATALOG_ID")
-    private CatalogEntity catalog;
+    private CatalogEntity catalogId;
 
     @ManyToOne
     @MapsId("genreId")
     @JoinColumn(name = "GENRE_ID")
-    private GenreEntity genre;
+    private GenreEntity genreId;
 }

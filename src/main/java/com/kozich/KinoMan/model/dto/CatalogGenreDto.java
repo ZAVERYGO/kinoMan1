@@ -7,9 +7,9 @@ import lombok.Data;
 
 @Data
 public class CatalogGenreDto {
-    private CatalogGenrePK catalogGenrePkDto;
+    private CatalogGenrePkDto catalogGenrePkDto;
 
-    private CatalogDto catalog;
+    private CatalogDto catalogId;
 
-    private GenreDto genre;
+    private GenreDto genreId;
 }

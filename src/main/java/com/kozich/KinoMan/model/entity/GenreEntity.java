@@ -13,13 +13,13 @@ public class GenreEntity {
     @Column(name = "GENRE_ID", nullable = false, unique = true)
     @SequenceGenerator(name = "seq_genre",
             sequenceName = "seq_genre",
-            initialValue = 1, allocationSize = 1)
+            allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_genre")
     private Long id;
 
     @Column(name = "GENRE", nullable = false, length = 20)
     private String genre;
 
-    @OneToMany(mappedBy = "genre")
+    @OneToMany(mappedBy = "genreId")
     private List<CatalogGenreEntity> catalog;
 }

@@ -12,7 +12,7 @@ public class UserEntity {
     @Column(name = "USER_ID", nullable = false, unique = true)
     @SequenceGenerator(name = "seq_user",
             sequenceName = "seq_user",
-            initialValue = 1, allocationSize = 1)
+            allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_user")
     private Long id;
 

@@ -1,8 +1,8 @@
 package com.kozich.KinoMan.model.dto;
 
-import com.kozich.KinoMan.model.entity.CatalogEntity;
 import lombok.Data;
 
+import java.sql.Date;
 import java.util.List;
 
 @Data
@@ -14,9 +14,7 @@ public class ActorDto {
 
     private String lastName;
 
-    private String dayOfBirth;
-
-    private List<CatalogActorDto> catalog;
+    private Date dayOfBirth;
 
 }
 

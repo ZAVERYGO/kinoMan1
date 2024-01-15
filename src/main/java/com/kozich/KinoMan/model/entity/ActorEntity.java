@@ -3,10 +3,10 @@ package com.kozich.KinoMan.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Date;
 import java.util.List;
 
 @Data
-@EqualsAndHashCode
 @Entity
 @Table(name = "ACTOR")
 public class ActorEntity {
@@ -14,7 +14,7 @@ public class ActorEntity {
     @Column(name = "ACTOR_ID", nullable = false, unique = true)
     @SequenceGenerator(name = "seq_actor",
     sequenceName = "seq_actor",
-    initialValue = 1, allocationSize = 1)
+    allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_actor")
     private Long id;
 
@@ -25,9 +25,9 @@ public class ActorEntity {
     private String lastName;
 
     @Column(name = "DAY_OF_BIRTH", nullable = false)
-    private String dayOfBirth;
+    private Date dayOfBirth;
 
-    @OneToMany(mappedBy = "actor")
+    @OneToMany(mappedBy = "actorId")
     private List<CatalogActorEntity> catalog;
 
 }

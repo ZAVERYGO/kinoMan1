@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@NoArgsConstructor
 @Table(name = "CATALOG_ACTOR")
 public class CatalogActorEntity {
     @EmbeddedId
@@ -16,11 +15,11 @@ public class CatalogActorEntity {
     @ManyToOne
     @MapsId("catalogId")
     @JoinColumn(name = "CATALOG_ID")
-    private CatalogEntity catalog;
+    private CatalogEntity catalogId;
 
     @ManyToOne
     @MapsId("actorId")
     @JoinColumn(name = "ACTOR_ID")
-    private ActorEntity actor;
+    private ActorEntity actorId;
 }
 

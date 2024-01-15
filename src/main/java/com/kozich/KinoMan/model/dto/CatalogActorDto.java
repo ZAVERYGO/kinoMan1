@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class CatalogActorDto {
 
-    private CatalogDto catalogActorPkDto;
+    private Long catalogActorPkDto;
 
-    private CatalogDto catalog;
+    private CatalogDto catalogId;
 
-    private ActorDto actor;
+    private ActorDto actorId;
 }
