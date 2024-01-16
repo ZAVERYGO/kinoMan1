@@ -10,7 +10,7 @@ public class ActorDto {
 
     private Long id;
 
-    private String fistName;
+    private String firstName;
 
     private String lastName;
 

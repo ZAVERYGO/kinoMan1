@@ -19,7 +19,7 @@ class ActorMapperTest {
     void actorEntityToActorDto() {
         ActorEntity actorEntity = new ActorEntity();
         actorEntity.setId(1L);
-        actorEntity.setFistName("Nikita");
+        actorEntity.setFirstName("Nikita");
         actorEntity.setLastName("Kozich");
         actorEntity.setDayOfBirth(Date.valueOf("2004-04-14"));
 
@@ -27,7 +27,7 @@ class ActorMapperTest {
 
         Assertions.assertNotNull(actorDto);
         Assertions.assertEquals(actorEntity.getId(), actorDto.getId());
-        Assertions.assertEquals(actorEntity.getFistName(), actorDto.getFistName());
+        Assertions.assertEquals(actorEntity.getFirstName(), actorDto.getFirstName());
         Assertions.assertEquals(actorEntity.getLastName(), actorDto.getLastName());
         Assertions.assertEquals(actorEntity.getDayOfBirth(), actorDto.getDayOfBirth());
     }
@@ -36,7 +36,7 @@ class ActorMapperTest {
     void actorDtoToActorEntity() {
         ActorDto actorDto = new ActorDto();
         actorDto.setId(1L);
-        actorDto.setFistName("Nikita");
+        actorDto.setFirstName("Nikita");
         actorDto.setLastName("Kozich");
         actorDto.setDayOfBirth(Date.valueOf("2004-04-14"));
 
@@ -44,7 +44,7 @@ class ActorMapperTest {
 
         Assertions.assertNotNull(actorDto);
         Assertions.assertEquals(actorDto.getId(), actorEntity.getId());
-        Assertions.assertEquals(actorDto.getFistName(), actorEntity.getFistName());
+        Assertions.assertEquals(actorDto.getFirstName(), actorEntity.getFirstName());
         Assertions.assertEquals(actorDto.getLastName(), actorEntity.getLastName());
         Assertions.assertEquals(actorDto.getDayOfBirth(), actorEntity.getDayOfBirth());
     }

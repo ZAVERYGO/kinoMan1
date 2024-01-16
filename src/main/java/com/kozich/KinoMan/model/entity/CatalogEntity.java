@@ -3,6 +3,7 @@ package com.kozich.KinoMan.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class CatalogEntity {
     private Time duration;
 
     @Column(name = "RELEASED", nullable = false)
-    private Integer released;
+    private Date released;
 
     @Column(name = "DESCRIPTION")
     private String description;

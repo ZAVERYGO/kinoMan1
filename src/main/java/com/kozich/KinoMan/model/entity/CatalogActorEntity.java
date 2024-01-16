@@ -3,14 +3,13 @@ package com.kozich.KinoMan.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "CATALOG_ACTOR")
 public class CatalogActorEntity {
     @EmbeddedId
-    private CatalogActorPK catalogActorPK;
+    private CatalogActorPk catalogActorPk;
 
     @ManyToOne
     @MapsId("catalogId")
@@ -21,5 +20,6 @@ public class CatalogActorEntity {
     @MapsId("actorId")
     @JoinColumn(name = "ACTOR_ID")
     private ActorEntity actorId;
+
 }
 

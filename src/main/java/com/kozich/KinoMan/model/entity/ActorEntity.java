@@ -19,7 +19,7 @@ public class ActorEntity {
     private Long id;
 
     @Column(name = "FIRST_NAME", nullable = false, length = 20)
-    private String fistName;
+    private String firstName;
 
     @Column(name = "LAST_NAME", nullable = false, length = 20)
     private String lastName;

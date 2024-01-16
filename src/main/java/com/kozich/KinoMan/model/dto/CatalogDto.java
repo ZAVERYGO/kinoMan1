@@ -1,13 +1,11 @@
 package com.kozich.KinoMan.model.dto;
 
-import com.kozich.KinoMan.model.entity.ActorEntity;
 import com.kozich.KinoMan.model.entity.CatalogActorEntity;
 import com.kozich.KinoMan.model.entity.CatalogGenreEntity;
-import com.kozich.KinoMan.model.entity.GenreEntity;
-import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -24,7 +22,7 @@ public class CatalogDto {
 
     private Time duration;
 
-    private Integer released;
+    private Date released;
 
     private String description;
 
