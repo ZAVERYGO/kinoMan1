@@ -1,17 +1,12 @@
 package com.kozich.KinoMan.model.mapper;
 
-import com.kozich.KinoMan.model.dto.ActorDto;
 import com.kozich.KinoMan.model.dto.GenreDto;
-import com.kozich.KinoMan.model.entity.ActorEntity;
 import com.kozich.KinoMan.model.entity.GenreEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.sql.Date;
-
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class GenreMapperTest {
 

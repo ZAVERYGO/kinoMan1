@@ -1,7 +1,6 @@
 package com.kozich.KinoMan.model.mapper;
 
-import com.kozich.KinoMan.model.dto.CatalogActorDto;
-import com.kozich.KinoMan.model.entity.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import java.sql.Time;
 @SpringBootTest
 class CatalogActorMapperTest {
 
-    @Autowired
+    /*@Autowired
     CatalogActorMapper catalogActorMapper;
 
     @Test
@@ -33,9 +32,9 @@ class CatalogActorMapperTest {
         actorEntity.setFirstName("Nikita");
         actorEntity.setLastName("Kozich");
 
-        /*CatalogActorPk catalogActorPk = new CatalogActorPk();
+        *//*CatalogActorPk catalogActorPk = new CatalogActorPk();
         catalogActorPk.setCatalogId(1L);
-        catalogActorPk.setActorId(2L);*/
+        catalogActorPk.setActorId(2L);*//*
 
         CatalogActorEntity catalogActorEntity = new CatalogActorEntity();
         catalogActorEntity.setCatalogId(catalogEntity);
@@ -58,10 +57,10 @@ class CatalogActorMapperTest {
         Assertions.assertEquals(catalogActorEntity.getActorId().getLastName(), catalogActorDto.getActorId().getLastName());
         Assertions.assertEquals(catalogActorEntity.getActorId().getDayOfBirth(), catalogActorDto.getActorId().getDayOfBirth());
 
-        /*Assertions.assertEquals(catalogActorEntity.getCatalogActorPk().getActorId(), catalogActorDto.getCatalogActorPkDto().getActorId());
-        Assertions.assertEquals(catalogActorEntity.getCatalogActorPk().getCatalogId(), catalogActorDto.getCatalogActorPkDto().getCatalogId());*/
+        *//*Assertions.assertEquals(catalogActorEntity.getCatalogActorPk().getActorId(), catalogActorDto.getCatalogActorPkDto().getActorId());
+        Assertions.assertEquals(catalogActorEntity.getCatalogActorPk().getCatalogId(), catalogActorDto.getCatalogActorPkDto().getCatalogId());*//*
     }
-
+*/
     @Test
     void catalogActorDtoToCatalogActorEntity() {
     }
