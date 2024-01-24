@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface ActorService {
     List<ActorEntity> getAllActor();
+
+    ActorEntity getActorByFirstNameAndLastName(String firstName, String lastName);
+
+    List<ActorEntity> getActorByMovie(String name);
 }

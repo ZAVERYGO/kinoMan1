@@ -1,15 +1,13 @@
-package com.kozich.KinoMan.model.dto;
+package com.kozich.KinoMan.model.businessObjects;
 
-import com.kozich.KinoMan.model.entity.CatalogActorEntity;
-import com.kozich.KinoMan.model.entity.CatalogGenreEntity;
+import jakarta.persistence.Column;
 import lombok.Data;
 
+import java.sql.Date;
 import java.sql.Time;
-import java.util.Date;
-import java.util.List;
 
 @Data
-public class CatalogDto {
+public class Catalog {
     private Long id;
 
     private String type;

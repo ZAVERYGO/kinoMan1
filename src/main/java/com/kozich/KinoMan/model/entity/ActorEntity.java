@@ -2,11 +2,13 @@ package com.kozich.KinoMan.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.sql.Date;
 import java.util.List;
 
 @Data
+@Accessors(chain = true)
 @Entity
 @Table(name = "ACTOR")
 public class ActorEntity {
