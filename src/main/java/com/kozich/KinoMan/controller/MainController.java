@@ -35,6 +35,10 @@ public class MainController {
         this.catalogListMapper = catalogListMapper;
     }
 
+    @GetMapping("/main")
+    public String getMain(Model model){
+        return "main";
+    }
     @GetMapping("/actors")
     public String getActors(Model model){
         model.addAttribute("actors", actorListMapper.actorListToActorDtoList(actorListMapper.actorEntityListToActorList(actorService.getAllActor())));
