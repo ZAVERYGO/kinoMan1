@@ -16,4 +16,5 @@ public interface ActorRepository extends JpaRepository<ActorEntity, Long> {
     List<ActorEntity> findByMovie(@Param("name") String name);
 
 
+
 }
