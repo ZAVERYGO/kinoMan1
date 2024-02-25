@@ -3,6 +3,7 @@ src/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/src/main/resoursces/application.properties
 
 
 ### STS ###
@@ -35,4 +36,3 @@ build/
 
 # Project exclude paths
 /target/
-*/src/main/resoursces/application.properties
